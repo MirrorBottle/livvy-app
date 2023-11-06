@@ -161,7 +161,7 @@ class _SignInFirstScreenState extends State<SignInFirstScreen> {
                               width: 10,
                             ),
                             Text(
-                              "Data Diri",
+                              "Verifikasi No. Handphone",
                               style: Theme.of(context).textTheme.displayMedium,
                             )
                           ],

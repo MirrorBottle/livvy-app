@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
           inputDecorationTheme: InputDecorationTheme(
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(20)))),
-      home: const SignInFirstScreen(),
+      home: const OnboardingScreen(),
       builder: EasyLoading.init(),
     );
   }

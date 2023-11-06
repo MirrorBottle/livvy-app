@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:livvy_app/components/button_component.dart';
+import 'package:livvy_app/pages/down_payment/down_payment_top_up.dart';
 import 'package:livvy_app/pages/liv_path/liv_path_home_search.dart';
+import 'package:unicons/unicons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -64,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: Theme.of(context)
                                   .textTheme
                                   .bodySmall!
-                                  .copyWith(color: Colors.greenAccent),
+                                  .copyWith(color: Colors.green),
                             ),
                           ],
                         ),
@@ -81,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: Theme.of(context)
                                   .textTheme
                                   .bodySmall!
-                                  .copyWith(color: Colors.greenAccent),
+                                  .copyWith(color: Colors.green),
                             ),
                           ],
                         )
@@ -89,6 +91,245 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 )),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Icon(
+                        UniconsLine.chart_pie,
+                        size: 24,
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Portfolio",
+                        style: Theme.of(context).textTheme.displayMedium,
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 160,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SizedBox(
+                    width: 350,
+                    height: 160,
+                    child: Card(
+                        color: Colors.white,
+                        elevation: 0,
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                              color: Color(0xFFEEEEEE), width: 2),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        clipBehavior: Clip.hardEdge,
+                        child: InkWell(
+                          splashColor: Colors.white,
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DownPaymentTopUpScreen()),
+                              );
+                          },
+                          child: SizedBox(
+                            width: 300,
+                            height: 100,
+                            child: Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Rumah 1',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .copyWith(
+                                            fontSize: 24,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .secondary),
+                                  ),
+                                  Text(
+                                    'Rp100.000.000',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .copyWith(
+                                            fontSize: 18,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.w100),
+                                  ),
+                                  const SizedBox(
+                                    height: 22,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "Sisa Target",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall,
+                                          ),
+                                          Text(
+                                            "RP 0",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall!
+                                                .copyWith(color: Colors.green),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Text(
+                                            "Bulan",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall,
+                                          ),
+                                          Text(
+                                            "Ke-16",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall!
+                                                .copyWith(color: Colors.black),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        )),
+                  ),
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 350,
+                    height: 160,
+                    child: Card(
+                        color: Colors.white,
+                        elevation: 0,
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                              color: Color(0xFFEEEEEE), width: 2),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        clipBehavior: Clip.hardEdge,
+                        child: InkWell(
+                          splashColor: Colors.white,
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DownPaymentTopUpScreen()),
+                              );
+                          },
+                          child: SizedBox(
+                            width: 300,
+                            height: 100,
+                            child: Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Rumah 2',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .copyWith(
+                                            fontSize: 24,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .secondary),
+                                  ),
+                                  Text(
+                                    'Rp300.000.000',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .copyWith(
+                                            fontSize: 18,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.w100),
+                                  ),
+                                  const SizedBox(
+                                    height: 22,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "Sisa Target",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall,
+                                          ),
+                                          Text(
+                                            "RP 200.000.000",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall!
+                                                .copyWith(color: Colors.green),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Text(
+                                            "Bulan",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall,
+                                          ),
+                                          Text(
+                                            "Ke-10",
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall!
+                                                .copyWith(color: Colors.black),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        )),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 40),
             Container(
               width: MediaQuery.of(context).size.width,
@@ -102,16 +343,19 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Theme.of(context).colorScheme.secondary)),
                   Text("Solusi DP-Mu, dari Livvy",
                       style: Theme.of(context).textTheme.displayMedium),
-
-                  const SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   SizedBox(
                     width: 200,
                     child: ButtonComponent(
-                        buttontext: "Coba Sekarang", onPressed: () {
+                        buttontext: "Coba Sekarang",
+                        onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const LivPathHomeSearchScreen()),
+                                builder: (context) =>
+                                    const LivPathHomeSearchScreen()),
                           );
                         }),
                   )
